@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <title>Balthazar - Admin</title>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="brand">Balthazar - Admin</div>
+            <ul class="nav-links">
+                <li><a href="#" id="home">Accueil</a></li>
+                <li><a href="#" id="requests">Demande</a></li>
+                <li><a href="#" id="settings">Paramètres</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div id="home-content">Bienvenue à l'accueil!</div>
+    <div id="contacts" style="display: none;"></div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2023 Balthazar. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('home').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contacts').style.display = 'none';
+        document.getElementById('home-content').style.display = 'block';
+    });
+
+    document.getElementById('requests').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contacts').style.display = 'block';
+        document.getElementById('home-content').style.display = 'none';
+    });
+
+    document.getElementById('settings').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contacts').style.display = 'none';
+        document.getElementById('home-content').style.display = 'none';
+    });
+
+    fetch('http://localhost:3000/contacts')
+        .then((response) => response.json())
+        .then((contacts) => {
+            const contactsElement = document.getElementById('contacts');
+            contacts.forEach((contact) => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card';
+                cardElement.setAttribute('id', contact.id);
+
+                const nameElement = document.createElement('h3');
+                nameElement.textContent = contact.name;
+                nameElement.className = 'card-title';
+                cardElement.appendChild(nameElement);
+
+                const emailElement = document.createElement('p');
+                emailElement.textContent = contact.email;
+                emailElement.className = 'card-subtitle';
+                cardElement.appendChild(emailElement);
+
+                const messageElement = document.createElement('p');
+                messageElement.textContent = contact.message;
+                messageElement.className = 'card-text';
+                cardElement.appendChild(messageElement);
+
+                const deleteButton = document.createElement('button');
+                deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+                deleteButton.className = 'delete-button';
+                deleteButton.setAttribute('data-id', contact.id);  // Stocker l'ID du contact dans le bouton "delete"
+                deleteButton.addEventListener('click', deleteContact);  // Ajouter un gestionnaire d'événements pour le clic sur le bouton "delete"
+                cardElement.appendChild(deleteButton);
+
+                const validateButton = document.createElement('button');
+                validateButton.innerHTML = '<i class="fa-solid fa-check-to-slot"></i>'; // Icône de validation
+                validateButton.className = 'validate-button';
+                cardElement.appendChild(validateButton);
+
+                contactsElement.appendChild(cardElement);
+            });
+        })
+        .catch((error) => console.error('Error:', error));
+    function deleteContact(event) {
+        const button = event.currentTarget;
+        const contactId = button.getAttribute('data-id');
+
+        fetch(`http://localhost:3000/contacts/${contactId}`, {
+            method: 'DELETE',
+        })
+            .then((response) => {
+                if (response.ok) {
+                    // Supprimez la carte de contact de la page
+                    const cardElement = document.getElementById(contactId);
+                    cardElement.parentNode.removeChild(cardElement);
+                } else {
+                    console.error('Erreur lors de la suppression du contact');
+                }
+            })
+            .catch((error) => console.error('Error:', error));
+    }
+</script>
+
+</body>
+</html>

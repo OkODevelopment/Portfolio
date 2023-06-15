@@ -1,0 +1,150 @@
+// Variables
+$primary-color: #007bff;
+$background-color: #222;
+$text-color: #fff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .card {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 10px; /* Réduire le rembourrage */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Réduire la marge */
+    opacity: 0.8; /* Ajouter de la transparence */
+    width: 200px; /* Définir une largeur fixe */
+
+    display: inline-block; /* Afficher les cartes en ligne */
+    margin-right: 10px; /* Ajouter un espace entre les cartes */
+    vertical-align: top; /* Aligner les cartes en haut */
+    margin-top: 50px; /* Ajouter une marge supérieure plus grande */
+
+    .card-title {
+      font-size: 20px; /* Réduire la taille de police */
+      margin-bottom: 5px; /* Réduire la marge */
+    }
+
+    .card-subtitle {
+      font-size: 16px; /* Réduire la taille de police */
+      margin-bottom: 5px; /* Réduire la marge */
+    }
+
+    .card-text {
+      font-size: 14px; /* Réduire la taille de police */
+    }
+  }
+
+  .delete-button,
+  .validate-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #cccccc;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 40px;
+
+    &:hover {
+      color: #e74c3c; // Couleur de survol pour le bouton de suppression
+    }
+  }
+
+  .validate-button {
+    &:hover {
+      color: #27ae60; // Couleur de survol pour le bouton de validation
+    }
+  }
+
+
+
+}
+
+header {
+  background-color: $primary-color;
+  padding: 10px;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-left: 10px;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+          padding: 5px 10px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+#home-content {
+  width: 100%;
+  height: calc(100vh - 60px); // 60px is the height of the nav bar, adjust accordingly
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+    color: #333;
+  }
+
+  p {
+    font-size: 1em;
+    color: #666;
+  }
+}

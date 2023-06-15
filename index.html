@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Title: add your Portfolio websites's title here -->
+    <title>Balthazar | Portfolio</title>
+
+    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="[username], [name], skill" />
+
+    <!-- Improve your SEO by adding a small descrption of you -->
+    <meta name="description" content="[Your name here] | Developer" />
+
+    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
+    <link rel="icon" type="image/png" href="./assets/b_logo.png" />
+
+    <!-- Add your primary-theme color for the value of content -->
+    <meta name="theme-color" content="#36d1dc" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <!-- Fill content with the URL of this portfolio you'll host -->
+    <meta property="og:url" content="https://devfolio.js.org/" />
+    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
+    <meta property="og:title" content="[Your name here] | Developer" />
+    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
+    <meta property="og:description" content="Made using DevFolio Template" />
+    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
+      so that a thumbnail image of your portfolio is shown while shared on other platform -->
+    <meta
+      property="og:image"
+      content="https://devfolio.js.org/assets/devfolio.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- Again fill content attr with the URL of this portfolio you'll host -->
+    <meta property="twitter:url" content="https://devfolio.js.org" />
+    <!-- Recommended to use the same text used within <title> element -->
+    <meta property="twitter:title" content="[Your name here] | Developer" />
+    <!-- short description that shows up while your portfolio is shared -->
+    <meta
+      property="twitter:description"
+      content="Made using DevFolio Template"
+    />
+    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
+    <meta
+      property="twitter:image"
+      content="https://anilseervi.vercel.app/assets/devfolio.png"
+    />
+
+    <!-- link tags -->
+    <link rel="preload" as="style" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FontAwesome Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+
+    <script defer src="./javascript/scrollreveal.min.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="./javascript/scrollveal.js"
+    ></script>
+
+    <!-- Remove Google Analytics once you have your portfolio website set-up -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122228201-4")
+    </script>
+    <!-- End of Google Analytics -->
+  </head>
+  <body>
+  <nav class="navbar">
+    <!-- ... autres éléments de la navbar ... -->
+    <div class="logo-container">
+      <img src="assets/b_logo.png" alt="Logo de mon site" class="logo">
+    </div>
+  </nav>
+  <!-- Hero Section -->
+    <div id="hero">
+      <section class="container">
+        <h1 class="hero-title">
+          Bonjour, je m'appelle <span class="text-color-main name">Balthazar</span>
+          <br />
+          Je suis un jeune développeur.
+        </h1>
+        <p class="hero-cta">
+          <a class="cta-btn cta-btn--hero" href="#about">Me découvrir</a>
+        </p>
+      </section>
+      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+        <div class="scroll-down"></div
+      ></a>
+    </div>
+    <!-- /END Hero Section -->
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">A propos</h2>
+        <div class="row about-wrapper">
+          <div class="about-wrapper__image">
+            <img
+              class="img-fluid"
+              src="./assets/profile_photo.png"
+              alt="Profile Image"
+              width="550"
+              height="450"
+            />
+          </div>
+          <div class="about-wrapper__info">
+            <p class="about-wrapper__info-text">
+              Bonjour ! Je suis Balthazar Beguin, un jeune développeur de 19 ans. Actuellement en alternance chez Carrefour Links, je poursuis mes études en BTS SIO option SLAM à l'école UTEC d'Avon.
+            </p>
+            <br>
+            <p class="about-wrapper__info-text">
+              Passionné par le développement informatique, j'ai acquis de l'expérience pratique dans la création d'applications et de solutions logicielles. Mon portfolio reflète mon travail.
+              <br>
+              <br>
+              Je suis ouvert aux nouvelles opportunités et prêt à relever de nouveaux défis. N'hésitez pas à parcourir mon portfolio pour en savoir plus sur mes projets.
+            </p>
+            <span class="about-wrapper__cta">
+              <a href="assets/C.V%20Balthazar%202023.pdf" class="cta-btn cta-btn--resume" download>Télécharger mon C.V</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /END About Section -->
+
+    <!--Projects Section-->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projets</h2>
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">CyberLibrary</h3>
+              <p class="project-wrapper__text-info">
+                Dans le cadre de mon BTS, j'ai réalisé un projet de création d'un site web pour une bibliothèque.
+                Ce site, qui complète trois bibliothèques physiques, propose des fonctionnalités avancées telles qu'un
+                panel administrateur intuitif, une recherche de livres dynamique, etc. L'objectif est d'offrir aux utilisateurs
+                une expérience optimale en facilitant la gestion des livres et en leur permettant de trouver rapidement les
+                ouvrages souhaités, le tout dans un environnement en ligne convivial.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a class="btn" onclick="showPopup(event)">Voir</a>
+<!--                <a href="#" target="_blank" class="cta-btn text-color-main"-->
+<!--                  >Source Code</a-->
+<!--                >-->
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/cyberlibrary.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="860"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">EGI-School</h3>
+              <p class="project-wrapper__text-info">
+                Dans le cadre de mon BTS, j'ai développé un site web pour une école fictive.
+                Le projet met l'accent sur l'aspect visuel et interactif, avec des animations et une interface intuitive.
+                J'ai également ajouté des fonctionnalités avancées telles qu'un chatbot intéractif.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a class="btn" onclick="showPopup(event)">Voir</a>
+
+<!--                <a href="#" target="_blank" class="cta-btn text-color-main"-->
+<!--                  >Source Code</a-->
+<!--                >-->
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/project.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+<!--          <article class="row">-->
+<!--            <div class="project-wrapper__text">-->
+<!--              <h3 class="project-wrapper__text-title">Project Title</h3>-->
+<!--              <p class="project-wrapper__text-info">-->
+<!--                Lorem ipsum dolor sit amet consectetur adipisicing elit.-->
+<!--                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam-->
+<!--                necessitatibus impedit repellendus vero sed ipsa eos beatae ab-->
+<!--                sint saepe nostrum! Enim, perferendis.-->
+<!--              </p>-->
+<!--              <div class="project-wrapper__text-btns">-->
+<!--                <a-->
+<!--                  href="#"-->
+<!--                  target="_blank"-->
+<!--                  rel="noopener noreferrer"-->
+<!--                  class="cta-btn cta-btn&#45;&#45;hero cta-btn&#45;&#45;projects"-->
+<!--                  >See Live</a-->
+<!--                >-->
+<!--                <a href="#" target="_blank" class="cta-btn text-color-main"-->
+<!--                  >Source Code</a-->
+<!--                >-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="project-wrapper__image">-->
+<!--              <a href="#" target="_blank" rel="noopener noreferrer">-->
+<!--                <div class="thumbnail rounded">-->
+<!--                  <img-->
+<!--                    src="./assets/project.png"-->
+<!--                    class="img-fluid"-->
+<!--                    alt="Project Image"-->
+<!--                    width="1366"-->
+<!--                    height="767"-->
+<!--                  />-->
+<!--                </div>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </article>-->
+          <!-- /END Project -->
+        </div>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="ecole">
+      <div class="container">
+        <h2 class="section-title">Mon Ecole</h2>
+        <div class="contact-wrapper">
+          <img src="/assets/logo_utec.png" alt="Logo de votre site">
+          <br>
+          <br>
+
+          <p class="contact-wrapper__text">L'école UTEC Avon Fontainebleau est une institution d'enseignement supérieur réputée, spécialisée dans la formation technique et informatique. Elle propose notamment le BTS SIO option SLAM, un diplôme de niveau Bac+2 qui forme des professionnels compétents en développement logiciel et en gestion de projets. Les étudiants bénéficient d'un programme complet alliant théorie et pratique, avec des enseignants expérimentés et des équipements modernes. Après l'obtention du diplôme, les diplômés du BTS SIO option SLAM ont de nombreuses opportunités professionnelles, notamment en tant que développeurs logiciels, analystes-programmeurs ou techniciens de maintenance informatique.</p>
+          <br>
+          <br>
+          <a href="https://www.utec77.fr" class="cta-btn cta-btn--resume" target="_blank">UTEC</a>
+        </div>
+      </div>
+    </section>
+    <!-- END Contact Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title dark-blue-text">Contact</h2>
+      <div class="contact-wrapper">
+        <form id="contact-form" method="post">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="cta-btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- END Contact Section -->
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <a href="#hero" class="back-to-top" aria-label="go back to top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="github"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <hr />
+        <p class="footer__text">
+          &copy; <span id="year"></span> -
+          <a
+            href="https://github.com/OkODevelopment"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Beguin Balthazar</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <!-- END Footer Section -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function showPopup(event) {
+        event.preventDefault();
+
+        Swal.fire({
+          title: "Indisponible pour le moment",
+          text: "Veuillez réessayer plus tard",
+          icon: "warning",
+          iconColor: "#00AAFF",
+          confirmButtonColor: "#00AAFF",
+          confirmButtonText: "OK"
+        });
+      }
+    </script>
+  <script>
+    function confirmAndSubmit() {
+      // Vérifier si tous les champs sont remplis
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      if (name === '' || email === '' || message === '') {
+        // Afficher un message d'erreur si des champs sont vides
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez remplir tous les champs du formulaire',
+          icon: 'error'
+        });
+        return false; // Empêche la soumission du formulaire
+      }
+
+      // Vérifier si le format de l'adresse e-mail est correct
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.match(emailRegex)) {
+        // Afficher un message d'erreur si le format de l'adresse e-mail est incorrect
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez entrer une adresse e-mail valide',
+          icon: 'error'
+        });
+        return false; // Empêche la soumission du formulaire
+      }
+
+      // Utilise SweetAlert pour afficher une boîte de dialogue de confirmation
+      Swal.fire({
+        title: 'Confirmation',
+        text: 'Êtes-vous sûr de vouloir envoyer le formulaire ?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Envoyer',
+        cancelButtonText: 'Annuler'
+      }).then((result) => {
+        // Si l'utilisateur clique sur le bouton Envoyer, ne faites rien car le formulaire a déjà été soumis
+        if (result.isConfirmed) {
+          return true;
+        }
+      });
+
+      // Empêche la soumission par défaut du formulaire jusqu'à ce que la boîte de dialogue soit confirmée
+      return false;
+    }
+  </script>
+
+  <script>
+    // document.getElementById('contact-form').addEventListener('submit', function(e) {
+    //   e.preventDefault();
+    //
+    //   var name = document.getElementById('name').value;
+    //   var email = document.getElementById('email').value;
+    //   var message = document.getElementById('message').value;
+    //
+    //   fetch('http://localhost:3000/contacts', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ name: name, email: email, message: message }),
+    //   })
+    //           .then((response) => response.json())
+    //           .then((data) => console.log(data))
+    //           .catch((error) => console.error('Error:', error));
+    // });
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      if (name === '' || email === '' || message === '') {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez remplir tous les champs du formulaire',
+          icon: 'error'
+        });
+        return false;
+      }
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.match(emailRegex)) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez entrer une adresse e-mail valide',
+          icon: 'error'
+        });
+        return false;
+      }
+
+      Swal.fire({
+        title: 'Confirmation',
+        text: 'Êtes-vous sûr de vouloir envoyer le formulaire ?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Envoyer',
+        cancelButtonText: 'Annuler'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch('http://localhost:3000/contacts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: name, email: email, message: message }),
+          })
+                  .then((response) => {
+                    if (response.ok) {
+                      Swal.fire({
+                        title: 'Succès',
+                        text: 'Votre demande a été soumis avec succès',
+                        icon: 'success'
+                      }).then(() => {
+                        // Réinitialiser les champs du formulaire si nécessaire
+                        document.getElementById('name').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('message').value = '';
+                      });
+                    } else {
+                      throw new Error('Une erreur est survenue lors de l\'envoi du formulaire');
+                    }
+                  })
+                  .catch((error) => {
+                    console.error('Error:', error);
+                    Swal.fire({
+                      title: 'Erreur',
+                      text: error.message,
+                      icon: 'error'
+                    });
+                  });
+        }
+      });
+
+      return false;
+    });
+  </script>
+
+  <script>
+      document.getElementById("year").textContent = new Date().getFullYear()
+    </script>
+    <script src="./javascript/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="./javascript/valtilt.js"></script>
+  </body>
+</html>

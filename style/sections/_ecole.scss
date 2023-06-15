@@ -1,0 +1,44 @@
+#ecole {
+  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  -webkit-clip-path: polygon(0 2vh, 100% 7vh, 100% 95vh, 0 100vh);
+  clip-path: polygon(0 2vh, 100% 7vh, 100% 95vh, 0 100vh);
+  padding: 5rem 0 30rem 0;
+  margin-top: -10rem;
+  color: $white-color;
+
+  @include respond(tab-land) {
+    padding: 10rem 0;
+    margin-top: 0;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+
+  .contact-wrapper {
+    margin-top: 10rem; // Ajuste cette valeur selon tes besoins
+    padding: 0 2rem;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    &__text,
+    a {
+      font-size: 2.4rem;
+
+      /* Responsive for contact text */
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  h2.section-title {
+    margin-top: 5rem; // Ajuste cette valeur selon tes besoins
+  }
+}

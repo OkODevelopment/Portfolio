@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Balthazar</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <p class="title">Login</p>
+        <form class="form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="">
+            </div>
+            <button class="sign">Sign in</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    async function signIn() {
+        // Récupération des valeurs du formulaire
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        try {
+            let response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "username": username,
+                    "password": password
+                })
+            });
+
+            if (response.ok) {
+                sessionStorage.setItem('authenticated', true);
+                swal("Success", "Connexion autorisée", "success").then(() => {
+                    window.location.href = "admin.html";
+                });
+            } else {
+                swal("Error", "Identifiants invalides", "error");
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            swal("Error", "Une erreur s'est produite", "error");
+        }
+    }
+
+    document.querySelector(".sign").addEventListener("click", function (e) {
+        e.preventDefault();
+        signIn();
+    });
+</script>
+
+</body>
+</html>

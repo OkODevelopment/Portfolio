@@ -1,0 +1,156 @@
+$form-background: #1a202c;
+$form-text-color: #ffffff;
+$form-input-background: #2d3748;
+$form-input-border: #4a5568;
+$form-input-placeholder-color: #718096;
+$form-button-background: #805ad5;
+$form-button-color: #ffffff;
+$form-social-icons-color: #ffffff;
+$form-link-color: #a0aec0;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $form-background;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-container {
+  width: 320px;
+  border-radius: 0.75rem;
+  background-color: $form-input-background;
+  padding: 2rem;
+  color: $form-text-color;
+
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    margin-bottom: 1.5rem;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      label {
+        display: block;
+        color: $form-text-color;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: bold;
+      }
+
+      input {
+        border-radius: 0.375rem;
+        border: 1px solid $form-input-border;
+        outline: 0;
+        background-color: $form-input-background;
+        padding: 0.75rem 1rem;
+        color: $form-text-color;
+
+        &::placeholder {
+          color: $form-input-placeholder-color;
+        }
+
+        &:focus {
+          border-color: $form-button-background;
+        }
+      }
+    }
+  }
+
+  .sign {
+    display: block;
+    width: 100%;
+    background-color: $form-button-background;
+    padding: 0.75rem;
+    text-align: center;
+    color: $form-button-color;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($form-button-background, 10%);
+    }
+  }
+
+  .social-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .line {
+      height: 1px;
+      flex: 1 1 0%;
+      background-color: $form-input-border;
+    }
+
+    .message {
+      margin: 0 0.5rem;
+      font-size: 0.875rem;
+      color: $form-text-color;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+    .icon {
+      border-radius: 50%;
+      padding: 0.5rem;
+      border: none;
+      background-color: $form-input-background;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      svg {
+        height: 1.25rem;
+        width: 1.25rem;
+        fill: $form-social-icons-color;
+      }
+
+      &:hover {
+        background-color: darken($form-input-background, 10%);
+      }
+    }
+  }
+
+  .signup {
+    text-align: center;
+    font-size: 0.875rem;
+    color: $form-text-color;
+    margin-top: 1.5rem;
+
+    a {
+      color: $form-link-color;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
