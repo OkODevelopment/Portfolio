@@ -44,10 +44,10 @@
     <!-- Recommended to use the same text used within <title> element -->
     <meta property="twitter:title" content="[Your name here] | Developer" />
     <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
+<!--    <meta-->
+<!--      property="twitter:description"-->
+<!--      content="Made using DevFolio Template"-->
+<!--    />-->
     <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
     <meta
       property="twitter:image"
@@ -57,6 +57,7 @@
     <!-- link tags -->
     <link rel="preload" as="style" href="./css/main.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous" />
 
     <!-- FontAwesome Icons link -->
     <link
@@ -134,14 +135,14 @@
           </div>
           <div class="about-wrapper__info">
             <p class="about-wrapper__info-text">
-              Bonjour ! Je suis Balthazar Beguin, un jeune développeur de 19 ans. Actuellement en alternance chez Carrefour Links, je poursuis mes études en BTS SIO option SLAM à l'école UTEC d'Avon.
+              Bonjour ! Je suis Balthazar Beguin, un jeune développeur de 19 ans. Actuellement en alternance chez Carrefour Links, où je m'épanouis dans le domaine du développement informatique. En parallèle, je poursuis mes études en BTS SIO option SLAM à l'école UTEC d'Avon.
             </p>
             <br>
             <p class="about-wrapper__info-text">
-              Passionné par le développement informatique, j'ai acquis de l'expérience pratique dans la création d'applications et de solutions logicielles. Mon portfolio reflète mon travail.
+              Mon expérience chez Carrefour Links me permet d'appliquer mes connaissances théoriques à des projets concrets. J'ai ainsi développé des solutions logicielles, ce qui a renforcé mes compétences et ma passion pour le domaine.
               <br>
               <br>
-              Je suis ouvert aux nouvelles opportunités et prêt à relever de nouveaux défis. N'hésitez pas à parcourir mon portfolio pour en savoir plus sur mes projets.
+              N'hésitez pas à parcourir mon portfolio, qui témoigne de mes réalisations et de mon engagement dans le développement informatique.
             </p>
             <span class="about-wrapper__cta">
               <a href="assets/C.V%20Balthazar%202023.pdf" class="cta-btn cta-btn--resume" download>Télécharger mon C.V</a>
@@ -289,6 +290,50 @@
     </section>
     <!-- END Contact Section -->
 
+  <!-- Competences Section -->
+  <section id="competences">
+    <div class="container">
+      <div class="project-wrapper">
+        <h2 class="section-title dark-blue-text">Compétences</h2>
+        <div class="cards">
+          <div class="card red">
+            <p class="tip"><i class="fa-brands fa-python"></i>  Python</p>
+            <p class="second-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i></p>
+          </div>
+          <div class="card blue">
+            <p class="tip"><i class="fa-brands fa-html5"></i>  HTML/CSS</p>
+            <p class="second-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i></p>
+          </div>
+          <div class="card green">
+            <p class="tip"><i class="fa-brands fa-square-js"></i>  JavaScript</p>
+            <p class="second-text"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END Competences Section -->
+
+
+
+  <!-- Entreprise Section -->
+  <section id="entreprise">
+    <div class="container">
+      <h2 class="section-title">Mon Entreprise</h2>
+      <div class="contact-wrapper">
+        <img src="/assets/CarrefourLinks-Logo.png" alt="Logo de votre site" width="200" height="200">
+        <br>
+        <br>
+        <p class="contact-wrapper__text">Carrefour Links est une nouvelle filiale du groupe Carrefour, créée en partenariat avec Criteo, Google et Live Ramp. L'entité propose une suite logicielle d'analyses de données destinée à améliorer l'expérience client.Carrefour Links offre une plateforme d'analyse de données mondiale aux marques et autres partenaires, pour améliorer l'expérience client en ligne et en magasin. Cela consiste à utiliser de manière collaborative les données afin de générer plus de ventes. Ce projet s'inscrit dans la transformation digitale du groupe et le plan Carrefour 2022, dans lequel 2,8 milliards d'euros par an sur 5 ans sont investis dans le digital. Carrefour a créé un "data lake" mondial qui stocke 6 milliards de données, et a également développé une "data factory" pour aider les équipes à monter en compétence sur la data. De plus, des data scientists ont été embauchés dans différents pays, et Carrefour continue de migrer ses outils sur le cloud.</p>
+        <br>
+        <br>
+        <a href="https://links.carrefour.com" class="cta-btn cta-btn--resume" target="_blank">Carrefour Links</a>
+      </div>
+    </div>
+  </section>
+  <!-- END Entreprise Section -->
+
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
@@ -331,7 +376,7 @@
             <i class="fa-brands fa-linkedin"></i>
           </a>
           <a
-            href="#!"
+            href="https://github.com/OkODevelopment/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="github"
@@ -341,12 +386,10 @@
         </div>
         <hr />
         <p class="footer__text">
-          &copy; <span id="year"></span> -
-          <a
-            href="https://github.com/OkODevelopment"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Beguin Balthazar</a
+          Mail : balthazar.beguin.pro@gmail.com
+          <br>
+          &copy; <span>2023</span>
+          <a>Beguin Balthazar</a
           >.
         </p>
       </div>
@@ -508,11 +551,5 @@
       return false;
     });
   </script>
-
-  <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
-    </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
   </body>
 </html>
