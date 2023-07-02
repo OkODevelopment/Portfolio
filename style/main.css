@@ -421,7 +421,7 @@ section .row span {
   background-image: linear-gradient(135deg, #00e1ff 0%, #5b86e5 100%);
   -webkit-clip-path: polygon(0 2vh, 100% 7vh, 100% 95vh, 0 100vh);
   clip-path: polygon(0 2vh, 100% 7vh, 100% 95vh, 0 100vh);
-  padding: 5rem 0 30rem 0;
+  padding: 5rem 0 15rem 0;
   margin-top: -10rem;
   color: #ffffff;
 }
@@ -434,8 +434,7 @@ section .row span {
   }
 }
 #ecole .contact-wrapper {
-  margin-top: 10rem;
-  padding: 0 2rem;
+  margin-top: 5rem;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -443,7 +442,6 @@ section .row span {
   align-items: center;
 }
 #ecole .contact-wrapper__text {
-  margin-bottom: 2.5rem;
   text-align: center;
 }
 #ecole .contact-wrapper__text,
@@ -457,10 +455,6 @@ section .row span {
     font-size: 2rem;
   }
 }
-#ecole h2.section-title {
-  margin-top: 5rem;
-}
-
 #competences {
   background-color: #e5e5e5;
   color: #272341;
